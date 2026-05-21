@@ -1,10 +1,8 @@
-Dockerfile
 FROM python:3.11-slim
 
 WORKDIR /app
 
 COPY requirements.txt .
-# Ensure streamlit and requests are inside your requirements.txt, or add explicitly:
 RUN pip install --no-cache-dir -r requirements.txt && pip install streamlit requests
 
 COPY . .
