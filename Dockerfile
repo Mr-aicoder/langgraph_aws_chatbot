@@ -7,8 +7,5 @@ RUN pip install --no-cache-dir -r requirements.txt && pip install streamlit requ
 
 COPY . .
 
-# Make our startup shell script executable
-RUN chmod +x start.sh
-
-# Change entrypoint to execute our combined startup script
-CMD ["./start.sh"]
+# Run our Python-native process manager
+CMD ["python", "run.py"]
