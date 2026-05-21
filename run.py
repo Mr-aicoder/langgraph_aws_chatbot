@@ -4,9 +4,9 @@ import time
 
 print("🚀 Starting Dual-Process AI Application Stack...")
 
-# 1. Start the FastAPI backend on port 8000
+# 1. Start the FastAPI backend on port 8000 (Targeting app.py -> app variable)
 backend_process = subprocess.Popen([
-    sys.executable, "-m", "uvicorn", "main:app", 
+    sys.executable, "-m", "uvicorn", "app:app", 
     "--host", "0.0.0.0", "--port", "8000"
 ])
 
