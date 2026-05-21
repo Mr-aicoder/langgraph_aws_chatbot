@@ -1,8 +1,8 @@
 import streamlit as st
 import requests
 
-# Point this directly to your live AWS Backend IP
-BACKEND_URL = "http://13.233.105.204:8000/chat"  # Update path if your endpoint is named /query or /invoke
+# Since both processes run in the same container, use localhost!
+BACKEND_URL = "http://localhost:8000/chat"
 
 st.set_page_config(page_title="LangGraph Chatbot", page_icon="🤖", layout="centered")
 st.title("🤖 LangGraph Agent UI")
